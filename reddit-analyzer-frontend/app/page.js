@@ -39,7 +39,7 @@ const formatMessage = (text) => {
 };
 
 export default function Home() {
-  const backendUrl = "http://localhost:8000";
+  const backendUrl = "https://reddit-chat-beta1.onrender.com";
   const agentUrl = `${backendUrl}/awp`;
   const [backendStatus, setBackendStatus] = useState('Checking...');
   const [error, setError] = useState(null);
