@@ -1,0 +1,173 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Task List Management Rules
+
+## Purpose
+These are guidelines for managing task lists in markdown files to track progress through feature development. The goal is systematic, controlled execution that prevents scope creep and ensures quality at each step.
+
+## Core Execution Principles
+
+### **CRITICAL RULE: One Subtask at a Time**
+- Work on ONLY ONE subtask per interaction
+- Complete the subtask fully before proceeding
+- Mark the subtask as complete immediately after finishing
+- STOP and wait for user approval before continuing
+
+### **Never Skip the Process**
+- Do not attempt multiple subtasks in a single interaction
+- Do not jump ahead to "related" or "easy" tasks
+- Do not combine subtasks even if they seem simple
+- Always follow the sequential order unless explicitly instructed otherwise
+
+## Task Execution Workflow
+
+### Step 1: Identify Next Task
+- Scan the task list for the next uncompleted subtask (empty checkbox)
+- Read the task description carefully
+- Understand what specific outcome is required
+
+### Step 2: Execute Single Subtask
+- Focus entirely on completing just this one subtask
+- Write or modify code as needed
+- Test that the specific functionality works
+- Ensure the subtask meets its defined criteria
+
+### Step 3: Mark Complete and Report
+- Change `- [ ]` to `- [x]` for the completed subtask
+- Provide a brief summary of what was accomplished
+- Note any files that were created or modified
+- Mention any issues encountered or decisions made
+
+### Step 4: Stop and Wait
+- **ALWAYS STOP** after completing one subtask
+- Ask: "Subtask [X.X.X] completed. Shall I proceed with the next subtask?"
+- Wait for explicit user approval (like "yes", "go", "continue")
+- Do not assume permission to continue
+
+## Task Completion Format
+
+When marking tasks complete, use this format:
+
+```markdown
+### Progress Update
+✅ **Completed**: [X.X.X] [Task description]
+- **Files modified**: list of files changed
+- **Summary**: Brief description of what was accomplished
+- **Notes**: Any important decisions or issues encountered
+
+**Next up**: [X.X.X+1] [Next task description]
+
+Shall I proceed with the next subtask?
+```
+
+## Communication Guidelines
+
+### Starting Work
+When beginning work on a task list, say:
+- "I'll start with the first uncompleted subtask: [X.X.X] [description]"
+- Confirm the starting point if there are multiple uncompleted tasks
+
+### During Execution  
+- Focus language on the single task at hand
+- Avoid mentioning other tasks or getting distracted
+- Ask clarifying questions if the subtask is unclear
+
+### After Completion
+- Be specific about what was accomplished
+- Highlight any important technical decisions
+- Always ask permission before continuing
+
+### If Stuck
+- Explain what's blocking progress on the current subtask
+- Ask for guidance or clarification
+- Do not skip to a different task without permission
+
+## Error Handling
+
+### If a Subtask Fails
+- Mark the task with ❌ instead of ✅
+- Explain what went wrong
+- Ask for guidance on how to proceed
+- Do not attempt to fix by jumping to other tasks
+
+### If Requirements Are Unclear
+- Stop work on the current subtask
+- Ask specific clarifying questions
+- Wait for clarification before proceeding
+- Do not make assumptions that could lead to rework
+
+## Quality Control
+
+### Before Marking Complete
+- [ ] The subtask actually works as intended
+- [ ] Code follows existing patterns and conventions
+- [ ] No obvious errors or warnings introduced
+- [ ] Files are saved and changes are applied
+
+### Progress Tracking
+- Keep an accurate count of completed vs. remaining tasks
+- Update any "Relevant Files" section as new files are created
+- Maintain the task list formatting and numbering
+
+## User Interaction Patterns
+
+### Acceptable User Responses to Continue
+- "yes" / "y" / "go" / "continue" / "proceed"
+- "next" / "keep going" / "yes proceed"
+- Any clear affirmative response
+
+### When User Says "Stop" or "Wait"
+- Immediately halt execution
+- Preserve current progress
+- Wait for further instructions
+
+### When User Wants to Skip Tasks
+- Only skip if explicitly instructed
+- Mark skipped tasks with "➖ **Skipped**: [reason]"
+- Continue with the next logical task
+
+## Advanced Scenarios
+
+### Handling Dependencies
+- If a subtask requires completion of a different task first, stop and explain
+- Ask user how they want to handle the dependency
+- Do not automatically jump to the dependency task
+
+### Large File Changes
+- For subtasks involving many file changes, work systematically
+- Complete all changes for the subtask before marking done
+- Provide a clear summary of all modifications
+
+### Testing Integration
+- When subtasks involve testing, run tests before marking complete
+- Report test results as part of completion summary
+- If tests fail, mark subtask as blocked and ask for guidance
+
+## Troubleshooting Common Issues
+
+### "AI Is Doing Too Much"
+- Reminder: ONE subtask only, then stop
+- Check that subtasks are properly granular
+- Break down overly complex subtasks if needed
+
+### "Progress Is Too Slow"
+- Each subtask should take 15-30 minutes maximum
+- If subtasks are too large, they should be broken down further
+- Quality and reliability are more important than speed
+
+### "AI Keeps Getting Distracted"
+- Always refer back to the specific subtask being worked on
+- Ignore temptations to "fix" other issues encountered
+- Stay focused on the single objective
+
+## Success Metrics
+- Each subtask is completed fully before moving on
+- Progress is steady and predictable
+- Code quality remains high throughout
+- User maintains control over the development process
+- Large features get built reliably without chaos
+
+Remember: The goal is not speed—it's reliable, systematic progress that builds complex features without losing control or introducing bugs.
